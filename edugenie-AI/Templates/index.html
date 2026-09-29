@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie - AI Learning Assistant</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>?? EduGenie</h1>
+            <p>Google Gemini Powered Learning Assistant</p>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <section class="hero">
+            <h2>Learn Smarter with AI</h2>
+
+            <p>
+                Ask questions, simplify difficult concepts,
+                generate quizzes, summarize content,
+                and create personalized learning paths.
+            </p>
+        </section>
+
+
+        <section class="card">
+
+            <h2>What would you like to learn?</h2>
+
+            <label for="task">
+                Choose a learning task
+            </label>
+
+            <select id="task">
+
+                <option value="qa">
+                    Ask a Question
+                </option>
+
+                <option value="explain">
+                    Explain a Concept
+                </option>
+
+                <option value="quiz">
+                    Generate Quiz
+                </option>
+
+                <option value="summarize">
+                    Summarize Text
+                </option>
+
+                <option value="learn">
+                    Recommend Learning Path
+                </option>
+
+            </select>
+
+
+            <label for="inputText">
+                Enter your question, topic, or text
+            </label>
+
+            <textarea
+                id="inputText"
+                rows="10"
+                placeholder="Example: Explain artificial intelligence in simple words..."
+            ></textarea>
+
+
+            <div id="levelContainer" class="hidden">
+
+                <label for="level">
+                    Your learning level
+                </label>
+
+                <select id="level">
+
+                    <option value="beginner">
+                        Beginner
+                    </option>
+
+                    <option value="intermediate">
+                        Intermediate
+                    </option>
+
+                    <option value="advanced">
+                        Advanced
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button id="submitButton">
+                ? Generate
+            </button>
+
+        </section>
+
+
+        <section id="loading" class="loading hidden">
+
+            <div class="spinner"></div>
+
+            <p>
+                EduGenie is thinking...
+            </p>
+
+        </section>
+
+
+        <section id="resultSection" class="card hidden">
+
+            <h2>?? Result</h2>
+
+            <div id="result"></div>
+
+        </section>
+
+
+        <section id="errorSection" class="error hidden">
+
+            <h3>?? Something went wrong</h3>
+
+            <p id="errorMessage"></p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            EduGenie • AI Learning Assistant
+        </p>
+
+    </footer>
+
+
+    <script src="/static/app.js"></script>
+
+</body>
+</html>
